@@ -1,0 +1,316 @@
+<!DOCTYPE HTML>
+<!--
+	Projection by TEMPLATED
+	templated.co @templatedco
+	Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
+-->
+<html>
+	<head>
+		<title>Foodies</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+		<link href="https://fonts.googleapis.com/css?family=Yellowtail" rel="stylesheet">
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<style>
+
+			#upperButtons {
+				margin-left: 750px;
+				display: inline;
+			}
+
+			#addFood {
+				margin-right: 30px;
+			}
+
+			#header {
+				top:0;
+			}
+			.food-items {
+				border: 5px solid #6cc091;
+			}
+
+			.food-items img {
+				padding: 0px;
+				height: 100%;
+			}
+
+			.sidenav {
+			  height: 100%;
+			  width: 0;
+			  position: fixed;
+			  z-index: 1;
+			  top: 0;
+			  left: 0;
+			  background-color: #6cc091;
+			  overflow-x: hidden;
+			  transition: 0.5s;
+			  padding-top: 60px;
+			}
+
+			.sidenav div h2{
+				font-size: 20px;
+				color: white;
+			}
+
+			.sidenav div button {
+				size: 5px;
+				border: 5px solid white;
+				width :200px;
+				height: 50px;
+				font-size: 10px;
+				font-weight: bold;
+				text-align: center;
+			}
+
+			.sidenav div{
+			  padding: 8px 8px 8px 32px;
+			  text-decoration: none;
+			  font-size: 25px;
+			  color: white;
+			  display: block;
+			  transition: 0.3s;
+			}
+
+			.sidenav a {
+			  padding: 8px 8px 8px 32px;
+			  text-decoration: none;
+			  font-size: 25px;
+			  color: white;
+			  display: block;
+			  transition: 0.3s;
+			}
+
+			/*.sidenav a:hover {
+			  color: #f1f1f1;
+			}*/
+
+			.sidenav .closebtn {
+			  position: absolute;
+			  top: 0;
+			  right: 25px;
+			  font-size: 36px;
+			  margin-left: 50px;
+			}
+
+			@media screen and (max-height: 450px) {
+			  .sidenav {padding-top: 15px;}
+			  .sidenav a {font-size: 18px;}
+			}
+
+			#white-background {
+				display: none;
+				width: 100%;
+				height: 100%;
+				position: fixed;
+				top: 0px;
+				left: 0px;
+				background-color: #fefefe;
+				opacity: 0.7;
+				z-index: 9999;
+			}
+
+			#dlgbox {
+				/* initially dialogue box is hidden */
+				display: none;
+				position: fixed;
+				width: 480px;
+				z-index: 9999;
+				border-radius: 10px;
+				background-color: #7c7e7d;
+			}
+
+			#dlg-header {
+				background-color: #6cc091;
+				color: white;
+				font-size: 20px;
+				padding: 10px;
+				margin: 10px 10px 0px 10px;
+			}
+
+			#dlg-body {
+				background-color: white;
+				color: black;
+				font-size: 14px;
+				padding: 10px;
+				margin: 0px 10px 0px 10px;
+			}
+
+			#dlg-footer {
+				background-color: #f2f2f2;
+				text-align: right;
+				padding: 10px;
+				margin: 0px 10px 10px 10px;
+			}
+
+			#dlg-body button {
+				margin-top: 10px;
+				color: white;
+				border: 0px;
+				padding: 10px;
+				font-size: 20px;
+			}
+
+		</style>
+
+</head>
+	<body>
+
+
+
+		<div class="container mt-5">
+
+			<!-- side nav panel -->
+
+			<div id="mySidenav" class="sidenav mt-4">
+			  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+
+			  <div class="align-center"><i class="fas fa-user-circle fa-3x"></i></div>
+			  <div class=" align-left"><h2 id="user_name">Name : </h2></div>
+				<div class=" align-left"><h2 class="mb-5" id="user_add">Address : </h2></div>
+
+				<!-- <div class="align-center">
+					<button class="text-white button-Text">MANAGE FOOD ITEMS</button>
+				</div> -->
+
+				<div class="align-center">
+					<button onclick="logout()" class="text-white button-Text">LOGOUT</button>
+				</div>
+
+			</div>
+
+			<!-- header -->
+
+			<header id="header" class="mt-0" style="background-color:#6cc091">
+				<div class="inner">
+					<a href="#" class="logo" style="font-size:40px;"><strong style="font-family: 'Yellowtail', cursive;">FOODIES</strong></a>
+					<nav id="nav">
+						<span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; Profile</span>
+					</nav>
+					<a href="#navPanel" class="navPanelToggle"><span class="fa fa-bars"></span></a>
+				</div>
+			</header>
+
+
+			<span id="upperButtons">
+				<button onclick="addFoodItem()" id="addFood" class="btn btn-success text-white mt-4">Add Food Item</button>
+				<button	onclick="goToGeneric()" class="btn btn-info text-white mt-4">Go To Orders</button>
+			</span>
+
+			<!-- Food item list with corresponding categories -->
+
+			<div id="Breakfast">
+				<h1 style="color:#6cc091; font-size:50px; font-weight: 500px;">Breakfast : </h1>
+
+					<ul id="BreakfastId">
+
+					</ul>
+			</div>
+
+			<div id="South Indian">
+				<h1 style="color:#6cc091; font-size:50px; font-weight: 500px;">South Indian : </h1>
+
+				<ul id="South_IndianId">
+
+				</ul>
+
+			</div>
+
+			<div id="Vada">
+				<h1 style="color:#6cc091; font-size:50px; font-weight: 500px;">Vada : </h1>
+
+				<ul id="VadaId">
+
+				</ul>
+
+			</div>
+
+			<div id="Beverages">
+				<h1 style="color:#6cc091; font-size:50px; font-weight: 500px;">Beverages : </h1>
+
+				<ul id="BeveragesId">
+
+				</ul>
+
+			</div>
+
+		<!-- Dialog Box for modifying a new item -->
+
+
+		<!-- Dialogue Box For adding a new food item-->
+
+			<div id="white-background">
+
+			</div>
+
+			<div id="dlgbox">
+
+				<div id="dlg-header">Add Food Description</div>
+
+				<div id="dlg-body">
+					<form>
+						<label for="foodName">Name : </label>
+						<input name="foodName" type="text" id="nameID" required>
+
+						<label for="price">Price : </label>
+						<input type="text" name="price" id="priceID" required>
+
+						<label for="menuId">MenuId : </label>
+						<input type="text" name="menuId" id="menuIdID" required>
+
+						<label for="imageURL">Image URL : </label>
+						<input type="text" name="imageURL" id="imageURLID" required>
+
+						<button id="add-butt" onclick="addFoodData()">ADD</button>
+						<button id="cancel-butt" onclick="cancel()">CANCEL</button>
+					</form>
+				</div>
+
+					<div id="dlg-footer">
+							
+					</div>
+
+			</div>
+
+
+		<script>
+			function openNav() {
+			  document.getElementById("mySidenav").style.width = "250px";
+			}
+
+			function closeNav() {
+			  document.getElementById("mySidenav").style.width = "0";
+			}
+		</script>
+
+
+		<!-- Scripts -->
+		<!-- Firebase connectivity -->
+
+
+			<script src="https://www.gstatic.com/firebasejs/5.9.4/firebase.js"></script>
+			<script>
+			  // Initialize Firebase
+			  var config = {
+			    apiKey: "AIzaSyA8StH170o8UNkCmX_AGMBtMObbAe7SRyE",
+			    authDomain: "foodies-83b24.firebaseapp.com",
+			    databaseURL: "https://foodies-83b24.firebaseio.com",
+			    projectId: "foodies-83b24",
+			    storageBucket: "foodies-83b24.appspot.com",
+			    messagingSenderId: "519084486659"
+			  };
+			  firebase.initializeApp(config);
+			</script>
+
+
+			<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+			<script src="manageFoodItems.js"></script>
+			<script src="index.js"></script>
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/skel.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>

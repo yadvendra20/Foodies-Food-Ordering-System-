@@ -1,0 +1,245 @@
+<!DOCTYPE HTML>
+<!--
+	Projection by TEMPLATED
+	templated.co @templatedco
+	Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
+-->
+<html>
+	<head>
+		<title>Foodies</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+		<link href="https://fonts.googleapis.com/css?family=Yellowtail" rel="stylesheet">
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<style>
+
+			.sidenav {
+			  height: 100%;
+			  width: 0;
+			  position: fixed;
+			  z-index: 1;
+			  top: 0;
+			  left: 0;
+			  background-color: #6cc091;
+			  overflow-x: hidden;
+			  transition: 0.5s;
+			  padding-top: 60px;
+			}
+
+			.sidenav div h2{
+				font-size: 20px;
+				color: white;
+			}
+
+			.sidenav div button {
+				size: 5px;
+				border: 5px solid white;
+				width :200px;
+				height: 50px;
+				font-size: 10px;
+				font-weight: bold;
+				text-align: center;
+			}
+
+			.sidenav div{
+			  padding: 8px 8px 8px 32px;
+			  text-decoration: none;
+			  font-size: 25px;
+			  color: white;
+			  display: block;
+			  transition: 0.3s;
+			}
+
+			.sidenav a {
+			  padding: 8px 8px 8px 32px;
+			  text-decoration: none;
+			  font-size: 25px;
+			  color: white;
+			  display: block;
+			  transition: 0.3s;
+			}
+
+			/*.sidenav a:hover {
+			  color: #f1f1f1;
+			}*/
+
+			.sidenav .closebtn {
+			  position: absolute;
+			  top: 0;
+			  right: 25px;
+			  font-size: 36px;
+			  margin-left: 50px;
+			}
+
+			@media screen and (max-height: 450px) {
+			  .sidenav {padding-top: 15px;}
+			  .sidenav a {font-size: 18px;}
+			}
+
+			#foodTable {
+				margin-bottom: 0px;
+			}
+
+			.foodHeader {
+				text-align: center;
+			}
+
+		</style>
+	</head>
+	<body class="subpage">
+
+
+		<div id="login_div" class="main-div">
+
+			<!-- Header -->
+			<header id="header">
+				<div class="inner">
+					<a href="index.html" class="logo" style="font-size:40px;"><strong style="font-family: 'Yellowtail', cursive;">FOODIES</strong></a>
+					<nav id="nav">
+						<a href="index.html" style="font-size:25px;">Home</a>
+						<a href="generic.html" style="font-size:25px;">Signin</a>
+						<a href="elements.html" style="font-size:25px;">Signup</a>
+					</nav>
+					<a href="#navPanel" class="navPanelToggle"><span class="fa fa-bars"></span></a>
+				</div>
+			</header>
+
+		<!-- Three -->
+			<section id="three" class="wrapper">
+				<div class="inner">
+					<header class="align-center">
+						<h1 class="display-1 mb-4">Signin</h1>
+						<h2 class="display-3">Only <strong>CANTEEN OWNER</strong> can signin here</h2>
+					</header>
+
+					<!-- Form -->
+						<h3>Form</h3>
+
+
+							<div class="row uniform">
+								<div class="6u$ 12u$(xsmall)">
+									<input type="email" name="demo-email" id="demo-email" value="" placeholder="Email" />
+								</div>
+								<div class="6u$ 12u$(xsmall)">
+									<input type="password" name="demo-password" id="demo-password" value="" placeholder="Password" />
+								</div>
+								<!-- Break -->
+
+								<!-- <div class="6u$ 12u$(small)">
+									<input type="checkbox" id="demo-human" name="demo-human">
+									<label for="demo-human">I am a human and not a robot</label>
+								</div> -->
+								<!-- Break -->
+
+								<!-- Break -->
+								<div class="12u$">
+									<ul class="actions">
+										<li><button onclick="login()">LOGIN</button></li>
+
+										<!-- <li><button onclick="createAccount()">CREATE A NEW ACCOUNT</button></li> -->
+									</ul>
+								</div>
+							</div>
+				</div>
+			</section>
+
+
+		<!-- Footer -->
+			<footer id="footer">
+				<div class="inner">
+
+
+					<h1 class="display-2 text-white">Always at your service, Thankyou!</h1>
+
+				</div>
+			</footer>
+
+		</div>
+
+
+		<div id="user_div" class="loggedin-div align-center">
+
+			<!-- <h2 class="display-3" id="user_para">Welcome</h2> -->
+
+
+			<!-- <br>
+			<button onclick="sendVerification()">SEND VERIFICATION</button> -->
+
+
+			<!-- <h2>Animated Sidenav Example</h2>
+			<p>Click on the element below to open the side navigation menu.</p> -->
+
+					<div id="mySidenav" class="sidenav mt-4">
+					  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+
+					  <div class="align-center"><i class="fas fa-user-circle fa-3x"></i></div>
+					  <div class=" align-left"><h2 id="user_name">Name : </h2></div>
+						<div class=" align-left"><h2 class="mb-5" id="user_add">Address : </h2></div>
+
+						<div class="align-center">
+							<button class="text-white button-Text">MANAGE FOOD ITEMS</button>
+						</div>
+
+						<div class="align-center">
+							<button onclick="logout()" class="text-white button-Text">LOGOUT</button>
+						</div>
+
+					</div>
+
+			<header id="header" class="mt-0" style="background-color:#6cc091">
+				<div class="inner">
+					<a href="#" class="logo" style="font-size:40px;"><strong style="font-family: 'Yellowtail', cursive;">FOODIES</strong></a>
+					<nav id="nav">
+						<span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; Profile</span>
+					</nav>
+					<a href="#navPanel" class="navPanelToggle"><span class="fa fa-bars"></span></a>
+				</div>
+			</header>
+
+			<div class="container">
+
+
+			</div>
+		</div>
+
+		<script>
+			function openNav() {
+			  document.getElementById("mySidenav").style.width = "250px";
+			}
+
+			function closeNav() {
+			  document.getElementById("mySidenav").style.width = "0";
+			}
+		</script>
+
+
+		<!-- Scripts -->
+		<!-- Firebase connectivity -->
+
+
+			<script src="https://www.gstatic.com/firebasejs/5.9.4/firebase.js"></script>
+			<script>
+			  // Initialize Firebase
+			  var config = {
+			    apiKey: "AIzaSyA8StH170o8UNkCmX_AGMBtMObbAe7SRyE",
+			    authDomain: "foodies-83b24.firebaseapp.com",
+			    databaseURL: "https://foodies-83b24.firebaseio.com",
+			    projectId: "foodies-83b24",
+			    storageBucket: "foodies-83b24.appspot.com",
+			    messagingSenderId: "519084486659"
+			  };
+			  firebase.initializeApp(config);
+			</script>
+
+
+			<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+			<script src="index.js"></script>
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/skel.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>

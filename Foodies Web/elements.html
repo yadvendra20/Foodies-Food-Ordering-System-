@@ -1,0 +1,137 @@
+<!DOCTYPE HTML>
+<!--
+	Projection by TEMPLATED
+	templated.co @templatedco
+	Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
+-->
+<html>
+	<head>
+		<title>Foodies</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+		<link href="https://fonts.googleapis.com/css?family=Yellowtail" rel="stylesheet">
+		<link rel="stylesheet" href="assets/css/main.css" />
+	</head>
+	<body class="subpage">
+
+
+		<div id="login_div" class="main-div">
+			
+			<!-- Header -->
+			<header id="header">
+				<div class="inner">
+					<a href="index.html" class="logo" style="font-size:40px;"><strong style="font-family: 'Yellowtail', cursive;">FOODIES</strong></a>
+					<nav id="nav">
+						<a href="index.html" style="font-size:25px;">Home</a>
+						<a href="generic.html" style="font-size:25px;">Signin</a>
+						<a href="elements.html" style="font-size:25px;">Signup</a>
+					</nav>
+					<a href="#navPanel" class="navPanelToggle"><span class="fa fa-bars"></span></a>
+				</div>
+			</header>
+
+		<!-- Three -->
+			<section id="three" class="wrapper">
+				<div class="inner">
+					<header class="align-center">
+						<h1 class="display-1 mb-4">SignUp</h1>
+						<h2 class="display-3">Only <strong>CANTEEN OWNER</strong> can signup here</h2>
+					</header>
+
+					<!-- Form -->
+						<h3>Form</h3>
+
+						
+							<div class="row uniform">
+								<div class="6u$ 12u$(xsmall)">
+									<input type="text" name="demo-name" id="demo-name" value="" placeholder="Name" />
+								</div>
+								<div class="6u$ 12u$(xsmall)">
+									<input type="email" name="demo-email" id="demo-email" value="" placeholder="Email" />
+								</div>
+								<div class="6u$ 12u$(xsmall)">
+									<input type="password" name="demo-password" id="demo-password" value="" placeholder="Password" />
+								</div>
+								
+								<!-- Break -->
+
+								<!-- <div class="6u$ 12u$(small)">
+									<input type="checkbox" id="demo-human" name="demo-human">
+									<label for="demo-human">I am a human and not a robot</label>
+								</div> -->
+								<!-- Break -->
+								<div class="6u$ 12u$(xsmall)">
+									<input type="text" name="demo-address" id="demo-address" value="" placeholder="Address" />
+								</div>
+
+								<!-- Break -->
+								<div class="12u$">
+									<ul class="actions">
+										
+										<li><button onclick="createAccount()">CREATE A NEW ACCOUNT</button></li>
+									</ul>
+								</div>
+							</div>
+				</div>
+			</section>
+
+
+		<!-- Footer -->
+			<footer id="footer">
+				<div class="inner">
+
+
+					<h1 class="display-2 text-white">Always at your service, Thankyou!</h1>
+
+				</div>
+			</footer>
+
+		</div>
+
+
+		<div id="user_div" class="loggedin-div align-center">
+				
+			<h2 class="display-3" id="user_para">Welcome User</h2>
+
+			<h2 class="display-4" id="disappear_1">Verify your E-mail Address by clicking on the <strong>SEND VERIFICATION</strong>.</h2>
+
+			<button onclick="sendVerification()" id="disappear_2">SEND VERIFICATION</button>
+			<br>
+			<br>
+
+			<button onclick="logout()">Back To The Main Page</button>
+
+		</div>
+
+		
+
+		<!-- Scripts -->
+		<!-- Firebase connectivity -->
+		
+					
+			<script src="https://www.gstatic.com/firebasejs/5.9.4/firebase.js"></script>
+			<script>
+			  // Initialize Firebase
+			  var config = {
+			    apiKey: "AIzaSyA8StH170o8UNkCmX_AGMBtMObbAe7SRyE",
+			    authDomain: "foodies-83b24.firebaseapp.com",
+			    databaseURL: "https://foodies-83b24.firebaseio.com",
+			    projectId: "foodies-83b24",
+			    storageBucket: "foodies-83b24.appspot.com",
+			    messagingSenderId: "519084486659"
+			  };
+			  firebase.initializeApp(config);
+			</script>
+
+
+			<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+			<script src="elements.js"></script>
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/skel.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
